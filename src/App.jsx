@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 
-const Home = () => <div className="text-white text-center mt-20 text-2xl"></div>;
+const Home = () => <div className="text-white text-center mt-20 text-2xl">Home</div>;
 
 const App = () => {
   const videoRef = useRef(null);
@@ -20,7 +20,7 @@ const App = () => {
         if (video) {
           video.muted = false; // Aktifkan suara
         }
-      }, 2000); // Sesuaikan waktu delay jika diperlukan
+      }, 2000);
     }
   }, []);
 
@@ -39,7 +39,7 @@ const App = () => {
         <div className="relative z-10">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} /> {/* Login sebagai halaman awal */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
